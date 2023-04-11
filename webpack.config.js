@@ -8,7 +8,7 @@ module.exports = withModuleFederationPlugin({
 
   exposes: {
     // Adjusted line:
-    "./Module": "./src/app/checkout/checkout.module.ts",
+    "./Component": "./src/app/checkout/checkout.component.ts",
   },
 
   shared: {

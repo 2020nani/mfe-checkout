@@ -6,7 +6,7 @@ import { CHECKOUT_ROUTES } from './routes';
 import { FooterComponent } from '../header/footer.component';
 
 @NgModule({
-  declarations: [CheckoutComponent, FooterComponent],
+  declarations: [CheckoutComponent],
   imports: [CommonModule, RouterModule.forChild(CHECKOUT_ROUTES)],
 })
 export class CheckoutModule {}

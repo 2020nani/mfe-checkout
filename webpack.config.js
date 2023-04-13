@@ -14,6 +14,8 @@ module.exports = withModuleFederationPlugin({
     //"./Component": "./src/app/checkout/checkout.component.ts",
     "./Footer": "./src/app/header/footer.component.ts",
     //"./Module": "./src/app/checkout/checkout.module.ts",
+    "./Module": "./src/app/app-routing.module.ts",
+    "./Module": "./src/app/app.module.ts",
   },
 
   shared: {

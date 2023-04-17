@@ -9,12 +9,6 @@ module.exports = withModuleFederationPlugin({
   // A Aplicação que consome o AppHeader de shell o fará dessa forma: import Header from 'shell/Header';
 
   exposes: {
-    "./routes": "./src/app/app-routing.module.ts",
-    // Adjusted line:
-    //"./Component": "./src/app/checkout/checkout.component.ts",
-    "./Footer": "./src/app/header/footer.component.ts",
-    //"./Module": "./src/app/checkout/checkout.module.ts",
-    "./Module": "./src/app/app-routing.module.ts",
     "./Module": "./src/app/app.module.ts",
   },
 

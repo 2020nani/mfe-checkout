@@ -2,16 +2,12 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { AppComponent } from './app.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 const MFE1_ROUTES: Routes = [
   {
-    path: 'checkout',
-    loadChildren: () =>
-      import('./checkout/checkout.module').then((m) => m.CheckoutModule),
-  },
-  {
     path: '',
-    component: CheckoutComponent,
+    component: CarrinhoComponent,
   },
 ];
 

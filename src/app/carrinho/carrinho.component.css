@@ -1,0 +1,118 @@
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.table-content {
+  width: 95vw;
+}
+
+thead th {
+  color: #999;
+  text-align: left;
+  padding: 12px;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.table-content strong {
+  color: #333;
+  display: block;
+}
+.table-content span {
+  display: block;
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.table-content div {
+  display: flex;
+  align-items: center;
+}
+.table-content div input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #666;
+  padding: 6px;
+  width: 50px;
+}
+
+.table-content button {
+  background: none;
+  border: 0;
+  padding: 6px;
+}
+
+footer {
+  margin-top: 30px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer button {
+  width: 200px;
+  background: skyblue;
+  color: black;
+  border: 0;
+  border-radius: 4px;
+  padding: 12px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+footer button:hover {
+  background: yellow;
+}
+
+.card-valor-total {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.card-valor-total span {
+  color: #999;
+  font-weight: bold;
+}
+
+.card-valor-total strong {
+  font-size: 28px;
+  margin-left: 5px;
+}
+@media screen and (max-width: 570px) {
+  footer button {
+    width: 100px;
+  }
+  .card-valor-total strong {
+    font-size: 14px;
+  }
+  tbody td {
+    padding: 2px;
+  }
+
+  .table-content span {
+    font-size: 10px;
+  }
+
+  .table-content strong {
+    font-size: 14px;
+  }
+
+  .table-content div input {
+    width: 20px;
+  }
+
+  .table-content button {
+    padding: 0;
+  }
+}

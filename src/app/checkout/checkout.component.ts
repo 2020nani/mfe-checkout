@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -8,10 +9,11 @@ import { Component } from '@angular/core';
 export class CheckoutComponent {
   expression: boolean = false;
   assetUrl = __webpack_public_path__;
+  constructor(private router$: Router) {}
 
   teste() {
     console.log(document);
-    this.expression = !this.expression;
+    this.router$.navigate(['']);
     return this.assetUrl + 'styles.css';
   }
 }

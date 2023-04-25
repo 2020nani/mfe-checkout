@@ -1,1 +1,35 @@
-@import url("../../styles.css");
+.container {
+  display: flex;
+  justify-content: center;
+  background: white;
+  padding: 10px;
+}
+
+.card-compra {
+  width: 35%;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-compra h1 {
+  padding-top: 4px;
+  text-align: center;
+}
+
+.card-compra li {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.card-compra span {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.card-compra strong {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}

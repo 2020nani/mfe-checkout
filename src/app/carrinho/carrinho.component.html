@@ -1,0 +1,56 @@
+<div class="container" *ngIf="encomendas$ as encomendas">
+  <table class="table-content">
+    <thead>
+      <tr>
+        <th></th>
+        <th>encomenda</th>
+        <th>QTD</th>
+        <th>SUBTOTAL</th>
+        <th>TOTAL</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let encomenda of encomendas; index as i">
+      <tr>
+        <td>
+          <img src="" alt="" />
+        </td>
+        <td>
+          <strong>{{ encomenda.nome }}</strong>
+          <span>{{ encomenda.preco | currency : "BRL" : true }}</span>
+        </td>
+        <td>
+          <div>
+            <button type="button" (click)="adicionarCarrinho(encomenda)">
+              <mat-icon>add_shopping_cart</mat-icon>
+            </button>
+            <input type="number" readOnly value="{{ encomenda.quantidade }}" />
+            <button type="button" (click)="retirarCarrinho(i)">
+              <mat-icon>remove_shopping_cart</mat-icon>
+            </button>
+          </div>
+        </td>
+        <td>
+          <strong>0</strong>
+        </td>
+        <td>
+          <button type="button">teste</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <footer>
+    <button type="button" (click)="habilitarCheckout()">
+      FINALIZAR PEDIDO
+    </button>
+
+    <div class="card-valor-total">
+      <span>FRETE</span>
+      <strong>20</strong>
+      <span>TOTAL GAMES</span>
+      <strong>{{ getPrecoTotal() }}</strong>
+    </div>
+  </footer>
+  <div *ngIf="checkout$ == true">
+    <app-checkout></app-checkout>
+  </div>
+</div>
